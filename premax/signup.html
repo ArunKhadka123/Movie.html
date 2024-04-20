@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      background-color: #2e3037;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+      align-items: center;
+    }
+
+    .Signcontainer {
+      background-color: #333;
+      width: 400px;
+      border-radius: 8px;
+      margin-top: 200px;
+    }
+
+    input {
+      width: 30%;
+      padding: 10px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    #btn {
+      cursor: pointer;
+    }
+
+    #btn:hover {
+      background-color: red;
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    button {
+      cursor: pointer;
+      padding: 10px 20px;
+      background-color: #2e3037;
+      color: whitesmoke;
+      font-size: 16px; /* Increase font size slightly for better readability */
+      border: none;
+      margin-right: 10px; /* Reduce margin for tighter spacing */
+      border-radius: 5px; /* Add subtle border radius for aesthetics */
+    }
+
+    button:hover {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <form>
+      <button type="button" onclick="document.location='./index.html'">Home</button>
+      <button type="button" onclick="document.location='.contactus.html'">Contact</button>
+      <button>Ticket Rate</button>
+      <button type="button" onclick="document.location='./login.html'">Login</button>
+    </form>
+  </header>
+<form action="movie.php" method="post"> 
+<div class="Signcontainer">
+      <input type="text" id="FirstName" name="FirstName" placeholder="First Name" required>
+      <input type="text" id="Last Name" name="LastName" placeholder="Last Name" required>
+      <br>
+      <input type="email" id="email" name="Email" placeholder="Email" required>
+      <input type="text" id="Number" name="Mobile" placeholder="Mobile" required>
+      <br>
+      <input type="password" id="password" name="Password" placeholder="Password" required>
+      <input type="password" id="confirmPassword" name="ConfirmPassword" placeholder="Confirm Password" required>
+      <input type="submit" value="SignUp" id="btn">
+    </div>
+    </form>
+    <script>
+      document.getElementById("btn").addEventListener("click", function(event) {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+        
+        // Check if passwords match
+        if (password !== confirmPassword) {
+          // Prevent form submission
+          event.preventDefault();
+          
+          // Alert user that passwords don't match
+          alert("Passwords do not match. Please try again.");
+        }
+      });
+    </script>
+  
+</body>
+</html>

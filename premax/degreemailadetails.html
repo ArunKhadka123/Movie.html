@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-size: cover;
+      background-position: center;
+      background-color: #2e3037;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    h1 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .movie-details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .movie-poster {
+      flex: 0 0 200px;
+      margin-right: 20px;
+    }
+    
+    .movie-poster img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    
+    .movie-info {
+      flex: 1;
+    }
+    
+    .movie-info h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    
+    .movie-info p {
+      margin: 10px 0;
+      color: #666;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Movie Details</h1>
+    <div class="movie-details">
+      <div class="movie-poster">
+        <img src="degre.jpg" alt="Movie Poster">
+      </div>
+      <div class="movie-info">
+        <h2>DegreeMaila</h2>
+        <p><strong>Genre:</strong> Comedy, Drama</p>
+        <p><strong>Release Date:</strong> 12 April, 2024</p>
+        <p><strong>Duration:</strong> 2hr 30min</p>
+        <p><strong>Director:</strong> Ram Babu Gurung</p>
+        <p><strong>Stars:</strong> DayaHang Rai , Aanchal Sharma ,Bijay Baral
+        </p>
+        <p><strong>Description:</strong>"Degree Maila" is a fascinating comic story about a man trying to find where he belongs in society, and also searching for love and recognition. Through many ups and downs, he goes against what society expects of him and follows his own dreams, making his journey unique and inspiring.</p>
+        <button type="button" onclick="document.location='//www.youtube.com/watch?v=Sy5x1Nwm4mw&t=66s'" >Watch Trailer</button>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

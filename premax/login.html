@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premax Cinemas</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #2e3037;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      justify-content: center;
+      padding: 20px;
+    }
+    .Head{
+      display: flex;
+      justify-content: center;
+    }
+
+    button {
+      cursor: pointer;
+      padding: 10px 20px; 
+      background-color: #2e3037;
+      color: whitesmoke;
+      font-size: 16px; /* Increase font size slightly for better readability */
+      border: none;
+      margin-right: 10px; /* Reduce margin for tighter spacing */
+      border-radius: 5px; /* Add subtle border radius for aesthetics */
+    }
+
+    button:hover {
+      background-color: red;
+    }
+
+    h3 {
+      color: white;
+      text-align: center;
+      margin-bottom: 20px; /* Add some margin for better separation */
+    }
+
+    
+.Tala{
+    align-items: center;
+    text-align: center;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <form action="login.php" method="post">
+      <div class="Head">
+      <button type="button" onclick="document.location='./index.html'">Home</button>
+      <button type="button" onclick="document.location='./contactus.html'">Contact</button>
+      <button>Ticket Rate</button>
+      <button type="button" onclick="document.location='./login.html'">Login</button>
+    </form>
+  </div>
+  </header>
+  
+
+<div class="Tumbin"> 
+  <div class="LoginForm"> 
+    <div id="Loginn">
+      <form id="loginForm" action="login.php" method="post">
+        <div class="inputlogin">
+          <!-- <label for="Username">Username</label> -->
+          <input type="text" id="email" name="email" placeholder="Username">
+
+        </div>
+        <div class="inputlogin">
+          <!-- <label for="Pass">Password</label> -->
+          <input type="password" id="password" name="password" placeholder="Password">
+        </div>
+        <div>
+          <button type="submit">Login</button>
+        </div>
+      </form>
+      
+      <h3 id="Forgot" onclick="document.location='/.Forgotpass.html'"> Forgot Password?</h3>
+      <h5>or</h5>
+      <button type="button" onclick="document.location='./signup.html'">Sign Up</button>
+    </div>
+  </div>
+</div>
+
+<p id="loginMessage"></p>
+<!-- <a href="/signup.html"><button Sign Up ></a> -->
+<script src="login.js"></script>
+
+</body>
+</html>

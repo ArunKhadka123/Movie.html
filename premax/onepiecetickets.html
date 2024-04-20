@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premax Cinemas - Buy Tickets</title>
+  <style>
+    body {
+      background-color: #2e3037;
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    input[type="number"] {
+      width: 50%;
+    }
+
+    button {
+      width: 20%;
+      padding: 10px;
+      background-color: #2e3037;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 10px; 
+      align-items: center;
+      justify-content: center;
+      margin-left: 40%;
+
+    }
+
+    button:hover {
+      background-color:red
+    }
+
+  </style>
+</head>
+<body>
+  <h2>Buy Tickets</h2>
+
+  <form action="buytickets.php" method="post">
+    <label for="movie">Select Movie:</label>
+    <select id="movie" name="movie">
+
+      <option value="One Piece">OnePiece</option>
+     
+    </select>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <button type="submit">Buy Tickets</button>
+  </form>
+
+  <!-- Button to view details -->
+  <form action="view_tickets.php" method="post">
+    <button type="submit">View Tickets</button>
+  </form>
+</body>
+</html>

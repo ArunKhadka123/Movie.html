@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicketsCancel</title>
+</head>
+<body>
+    <!-- HTML code for cancel button -->
+<td>
+</td>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Add click event listener to all cancel buttons
+        document.querySelectorAll(".cancel-btn").forEach(function(btn) {
+            btn.addEventListener("click", function() {
+                var ticketId = this.getAttribute("data-ticket-id");
+                
+                // Send AJAX request to cancel ticket
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "ticketscancel.php", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            alert(xhr.responseText); // Display response from server
+                            // Optionally update UI here
+                        } else {
+                            alert("Error: " + xhr.statusText);
+                        }
+                    }
+                };
+                xhr.send("ticket_id=" + encodeURIComponent(ticketId));
+            });
+        });
+    });
+</script>
+
+
+</body>
+</html>

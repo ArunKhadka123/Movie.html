@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premax Cinemas</title>
+  <style>
+    body {
+      background-color: #2e3037;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      display: flex; 
+      justify-content: center;
+      padding: 20px;
+    }
+
+    button {
+      cursor: pointer;
+      padding: 10px 20px; 
+      background-color: #2e3037;
+      color: whitesmoke;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      width: 150px; /* Adjust the width as needed */
+      text-align: center; /* Align text to center */
+    }
+
+    button:hover {
+      background-color: red;
+    }
+
+    h3 {
+      color: white;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .posters {
+      display: flex; 
+      justify-content: center; /* Center posters horizontally */
+      padding: 20px;
+      width: 100%;
+    }
+
+    .poster-frame {
+      margin: 5px; 
+      width: 250px; 
+      height: 350px; 
+      position: relative; /* Position relative for absolute positioning of overlay */
+    }
+
+    .poster-image {
+      width: 100%; 
+      height: 100%; 
+      border-radius: 10px;
+      cursor: pointer; 
+    }
+
+    .poster-image:hover {
+      transform: scale(1.1); 
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0; /* Initially hidden */
+      transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+      border-radius: 10px;
+    }
+
+    .poster-frame:hover .overlay {
+      opacity: 1; /* Show overlay on hover */
+    }
+
+    .overlay-content {
+      text-align: center;
+    }
+
+    .overlay-content button {
+      padding: 10px 20px; 
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      margin: 0 5px; 
+      cursor: pointer;
+      margin-bottom: 10px;
+      width: 120px; /* Adjust the width as needed */
+      text-align: center; /* Align text to center */
+    }
+
+    .overlay-content button:hover {
+      background-color: #0056b3;
+    }
+
+    .Tala {
+      text-align: center;
+      color: white;
+      margin-top: 20px; 
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <form>
+      <button>Home</button>
+      <button type="button" onclick="document.location='./contactus.html'">Contact</button>
+      <button>Ticket Rate</button>
+      <button type="button" onclick="document.location='./login.html'">Login</button>
+    </form>
+  </header>
+
+  <h3>NOW SHOWING</h3>
+
+  <div class="posters">
+    <div class="poster-frame">
+      <img src="boksi2.jpg" alt="Movie Poster 1" class="poster-image">
+      <div class="overlay">
+        <div class="overlay-content">
+          <button onclick="viewDetails('./boksidetails.html')">View Details</button>
+          <button onclick="watchTrailer('foApyrXTQYw')">Watch Trailer</button>
+          <button onclick="buyTickets('./boksitickets.html')">Buy Tickets</button>
+        </div>
+      </div>
+    </div>
+    <div class="poster-frame">
+      <img src="puspha.jpg" alt="Movie Poster 2" class="poster-image">
+      <div class="overlay">
+        <div class="overlay-content">
+          <button onclick="viewDetails('./puspha2details.html')">View Details</button>
+          <button onclick="watchTrailer('aj0TXpTgbUM')">Watch Trailer</button>
+          <button onclick="buyTickets('./pusphatickets.html')">Buy Tickets</button>
+        </div>
+      </div>
+    </div>
+    <div class="poster-frame">
+      <img src="onepiece.jpg" alt="Movie Poster 3" class="poster-image">
+      <div class="overlay">
+        <div class="overlay-content">
+          <button onclick="viewDetails('./onepiecedetails.html')">View Details</button>
+          <button onclick="watchTrailer('lYQ_aqLvQ9w')">Watch Trailer</button>
+          <button onclick="buyTickets('./onepiecetickets.html')">Buy Tickets</button>
+        </div>
+      </div>
+    </div>
+    <div class="poster-frame">
+      <img src="degre.jpg" alt="Movie Poster 4" class="poster-image">
+      <div class="overlay">
+        <div class="overlay-content">
+          <button onclick="viewDetails('./degreemailadetails.html')">View Details</button>
+          <button onclick="watchTrailer('Sy5x1Nwm4mw&t=53s')">Watch Trailer</button>
+          <button onclick="buyTickets('./degretickets.html')">Buy Tickets</button>
+        </div>
+      </div>
+    </div>
+    <div class="poster-frame">
+      <img src="mahajatra.jpg" alt="Movie Poster 5" class="poster-image">
+      <div class="overlay">
+        <div class="overlay-content">
+          <button onclick="viewDetails('./mahajatradetails.html')">View Details</button>
+          <button onclick="watchTrailer('_E9H8VyuqnI')">Watch Trailer</button>
+          <button onclick="buyTickets('./mahajatratickets.html')">Buy Tickets</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="Tala">
+    <p>&copy; Premax Cinemas 2024</p>
+  </footer>
+
+  <script>
+   function viewDetails(detailsPage) {
+      window.location.href = detailsPage;
+    }
+
+    function watchTrailer(videoId) {
+      window.open('https://www.youtube.com/watch?v=' + videoId, '_blank');
+    }
+    
+    function buyTickets(detailsPage){
+      window.location.href = detailsPage;
+    }
+  </script>
+</body>
+</html>
